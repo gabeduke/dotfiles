@@ -1,0 +1,40 @@
+alias copy="xclip -selection c"
+alias paste="xclip -selection clipboard -o"
+
+alias pgadmin4='docker run -d \
+--restart always \
+--name pgadmin4 \
+--network host \
+-p 5050:5050 \
+-e UID=1000 \
+-e GID=1000 \
+-v ~/.pgadmin4:/data \
+-v /usr/lib/postgresql/9.6/bin:/usr/lib/postgresql/9.6/bin \
+-v /var/run/postgres:/var/run/postgres \
+chorss/docker-pgadmin4:2.0'
+
+alias cl='clear && ls -alF'
+
+### AWS
+awsprof() { 
+    if [ -z "${1}" ]; then
+        cat ~/.aws/credentials | grep -oP '\[\K[^\]]+'
+    else
+        export AWS_PROFILE=${1}
+    fi
+}
+
+#### Kubernetes
+alias k8s-idealeet-local='export KUBECONFIG=/home/gabeduke/.kube/idealeet.local.kubeconfig'
+alias k8s-idealeet-remote='export KUBECONFIG=/home/gabeduke/.kube/idealeet.remote.kubeconfig'
+alias k8s-rts='export KUBECONFIG=/home/gabeduke/.kube/rts-dev.kubeconfig'
+alias k8s-kubileet='export KUBECONFIG=/home/gabeduke/.kube/kubileet.kubeconfig'
+alias rook-tools='kubectl exec -it rook-tools -n rook /bin/bash'
+
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+
+alias aap_ksh="cd /home/gabeduke/repos/aap/aap-infrastructure/kubernetes/ksh"
+
+function ksh_src() {
+    source ksh -e ${1:-dev}
+}

@@ -14,7 +14,7 @@
         - git
         - gnome-tweak-tool
         - guake
-        - neovim
+        - vim
         - xclip
         - yadm
         - zsh

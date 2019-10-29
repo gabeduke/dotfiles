@@ -31,6 +31,7 @@
         - kafkactl
         - kubectl
         - microk8s
+        - ruby
         - slack
         - thefuck
         classic: yes

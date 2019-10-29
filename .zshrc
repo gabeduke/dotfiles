@@ -2,6 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 path+=$HOME/.gem/bin/
 
+eval $(thefuck --alias)
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/gabeduke/.oh-my-zsh"
 

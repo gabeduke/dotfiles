@@ -1,0 +1,35 @@
+- hosts: all
+  name: Setup development environment
+  become: yes
+  tasks:
+    - name: install packages
+      apt:
+        force_apt_get: yes
+        update_cache: yes
+        state: present
+        name:
+        - ansible
+        - bat
+        - curl
+        - git
+        - gnome-tweak-tool
+        - guake
+        - neovim
+        - xclip
+        - yadm
+        - zsh
+
+    - name: Install snaps (classic)
+      snap:
+        name:
+        - code
+        - chromium
+        - go
+        - goland
+        - helm
+        - kafkactl
+        - kubectl
+        - microk8s
+        - slack
+        - thefuck
+        classic: yes

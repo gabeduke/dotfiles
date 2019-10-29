@@ -26,6 +26,7 @@
         - chromium
         - go
         - goland
+        - grv
         - helm
         - kafkactl
         - kubectl

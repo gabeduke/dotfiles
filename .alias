@@ -5,4 +5,5 @@ alias paste="xclip -selection clipboard -o"
 
 #### Kubernetes
 alias k='kubectl'
+alias ki='kubectl iexec'
 alias wk='watch kubectl'

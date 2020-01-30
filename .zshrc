@@ -9,6 +9,7 @@ path+=$HOME/flutter/bin/cache/dart-sdk/bin
 path+=$HOME/flutter/.pub-cache/bin
 path+=$HOME/.pub-cache/bin
 path+="${KREW_ROOT:-$HOME/.krew}/bin"
+path+=/usr/local/kubebuilder/bin
 
 
 eval $(thefuck --alias)

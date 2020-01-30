@@ -7,3 +7,5 @@
 	mylog = log --pretty=format:'%h %s [%an]' --graph
 [core]
 	editor = vim
+[hub]
+	protocol = ssh

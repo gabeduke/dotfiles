@@ -3,6 +3,7 @@ alias cat='bat'
 alias copy="xclip -selection c"
 alias paste="xclip -selection clipboard -o"
 alias git=hub
+alias civo="docker run -it --rm -v $HOME/.civo.json:/home/user/.civo.json civo/cli:latest"
 
 #### Kubernetes
 alias k='kubectl'

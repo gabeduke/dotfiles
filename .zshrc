@@ -3,7 +3,7 @@
 path+=$HOME/.gem/bin/
 path+=$HOME/.garden/bin/
 path+=$HOME/.yarn/bin
-path+=$HOME/go/bin
+path+=$HOME/.npm/bin
 path+=$HOME/flutter/bin
 path+=$HOME/flutter/bin/cache/dart-sdk/bin
 path+=$HOME/flutter/.pub-cache/bin
@@ -11,6 +11,7 @@ path+=$HOME/.pub-cache/bin
 path+="${KREW_ROOT:-$HOME/.krew}/bin"
 path+=/usr/local/kubebuilder/bin
 
+export GIT_EDITOR="vim"
 
 eval $(thefuck --alias)
 

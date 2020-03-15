@@ -91,6 +91,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.alias
+source <(kubectl completion zsh)
+source <(stern --completion=zsh)
 
 PROMPT='$(kube_ps1)'$PROMPT
 

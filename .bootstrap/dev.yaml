@@ -11,6 +11,7 @@
         - ansible
         - bat
         - curl
+        - fzf
         - git
         - gnome-tweak-tool
         - guake
@@ -20,22 +21,8 @@
         - yadm
         - zsh
 
-    - name: Install snaps (classic)
-      snap:
-        name:
-        - code
-        - chromium
-        - go
-        - goland
-        - grv
-        - helm
-        - kafkactl
-        - kubectl
-        - microk8s
-        - ruby
-        - slack
-        - thefuck
-        classic: yes
+# gsettings set org.gnome.desktop.wm.keybindings switch-group "['disabled']"
+# gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['disabled']"
 
   roles:
     - name: tlp

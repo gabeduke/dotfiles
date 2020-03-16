@@ -1,0 +1,4 @@
+- src: https://github.com/angristan/ansible-yarn
+- src: aruhier.ansible_role_tlp
+- src: dj-wasabi.telegraf
+- src: chasinglogic.dconf_settings

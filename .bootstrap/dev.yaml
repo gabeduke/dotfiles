@@ -21,14 +21,22 @@
         - yadm
         - zsh
 
-# gsettings set org.gnome.desktop.wm.keybindings switch-group "['disabled']"
-# gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['disabled']"
-
   roles:
-    - name: tlp
+    - name: aruhier.ansible_role_tlp
       tags: tlp
       tlp_enable: true
 
-  roles:
+    - name: chasinglogic.dconf_settings
+      description: allow grave
+      gsetting:
+        key: org.gnome.desktop.wm.keybindings.switch-group
+        value: "['disabled']"
+
+    - name: chasinglogic.dconf_settings
+      description: allow grave in Wayland
+      gsetting:
+        key: org.gnome.desktop.wm.keybindings.switch-group-backward
+        value: "['disabled']"
+
     - name: ansible-yarn
       tags: yarn

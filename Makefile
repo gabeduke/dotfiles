@@ -1,11 +1,14 @@
 _BOOTSTRAP := $(CURDIR)/.bootstrap
 
 .DEFAULT_GOAL := help
-.PHONY: boostrap help
+.PHONY: boostrap help init
 
 ##@ System
 
-bootstrap: ## Bootstrap system packages
+init:
+	ansible-galaxy install -r $(_BOOTSTRAP)/requirements.yml
+
+bootstrap: init ## Bootstrap system packages
 	ansible-playbook -i $(_BOOTSTRAP)/hosts $(_BOOTSTRAP)/dev.yaml --limit localhost -K --verbose
 
 ##@ Helpers

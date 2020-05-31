@@ -11,27 +11,32 @@
         - ansible
         - bat
         - curl
+        - fzf
         - git
         - gnome-tweak-tool
         - guake
+        - pipenv
         - vim
         - xclip
         - yadm
         - zsh
 
-    - name: Install snaps (classic)
-      snap:
-        name:
-        - code
-        - chromium
-        - go
-        - goland
-        - grv
-        - helm
-        - kafkactl
-        - kubectl
-        - microk8s
-        - ruby
-        - slack
-        - thefuck
-        classic: yes
+  roles:
+    - name: aruhier.ansible_role_tlp
+      tags: tlp
+      tlp_enable: true
+
+    - name: chasinglogic.dconf_settings
+      description: allow grave
+      gsetting:
+        key: org.gnome.desktop.wm.keybindings.switch-group
+        value: "['disabled']"
+
+    - name: chasinglogic.dconf_settings
+      description: allow grave in Wayland
+      gsetting:
+        key: org.gnome.desktop.wm.keybindings.switch-group-backward
+        value: "['disabled']"
+
+    - name: ansible-yarn
+      tags: yarn

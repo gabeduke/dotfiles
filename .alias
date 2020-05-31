@@ -2,7 +2,14 @@
 alias cat='bat'
 alias copy="xclip -selection c"
 alias paste="xclip -selection clipboard -o"
+alias git=hub
+alias civo="docker run -it --rm -v $HOME/.civo.json:/home/user/.civo.json civo/cli:latest"
 
 #### Kubernetes
 alias k='kubectl'
+alias ki='kubectl iexec'
 alias wk='watch kubectl'
+alias kpatch="kubectl patch -p '{\"metadata\":{\"finalizers\": []}}' --type=merge"
+
+#### Openfaas
+export OPENFAAS_URL=http://faasd.local:8080

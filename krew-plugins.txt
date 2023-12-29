@@ -1,0 +1,5 @@
+iexec
+krew
+prompt
+stern
+view-secret
